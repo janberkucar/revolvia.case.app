@@ -2,6 +2,16 @@
 
 Submission of Janberk Uçar for the Job Hiring Proccess with Revolvia.
 
+#---
+![screen5](https://user-images.githubusercontent.com/44262613/87871313-fb44a700-c9b7-11ea-9df7-105cd9896861.JPG)
+
+![screen1](https://user-images.githubusercontent.com/44262613/87871286-d9e3bb00-c9b7-11ea-8423-b68de576d4ed.JPG)
+
+![screen2](https://user-images.githubusercontent.com/44262613/87871298-ee27b800-c9b7-11ea-8269-3223a491c16c.JPG)
+
+![screen3](https://user-images.githubusercontent.com/44262613/87871311-f8e24d00-c9b7-11ea-8eca-b2f10c8b681f.JPG)
+
+![screen4](https://user-images.githubusercontent.com/44262613/87871312-faac1080-c9b7-11ea-9816-eabbb7a6fd08.JPG)
 # Development Proccess.
 
 ---
