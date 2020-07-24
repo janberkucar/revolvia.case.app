@@ -1,7 +1,8 @@
 [
   {
     "journeyId": 1,
-    "title": "Become An Art Director",
+    "color": "#3e9a8f",
+    "title": "Art Director",
     "points": 582,
     "percent": 65,
     "rank": "Beginner",
@@ -9,64 +10,119 @@
       {
         "skillId": 1,
         "title": "Graphic Design",
-        "color": "0xFFEB4C3C",
-        "percent": 65
+        "color": "#ff3b30",
+        "percent": "65%"
       },
       {
         "skillId": 2,
         "title": "Motion Design",
-        "color": "0xFF75C6F5",
-        "percent": 90
+        "color": "#5ac8fa",
+        "percent": "90%"
       },
       {
         "skillId": 3,
         "title": "Illustration",
-        "color": "0xFF73D06F",
-        "percent": 40
+        "color": "#ed8987",
+        "percent": "40%"
       }
     ],
     "task": {
       "taskId": 1,
       "title": "Use Shortcuts As A Pro",
-      "tags": [
-        "Graphic Design",
-        "Motion Design",
-        "Illustration"
-      ]
+      "tags": ["Graphic Design", "Motion Design", "Illustration"]
     }
   },
   {
     "journeyId": 2,
-    "title": "Become A Frontend Developer",
+    "color": "#f76325",
+    "title": "Journey 2",
+    "points": 220,
+    "percent": 20,
+    "rank": "Beginner",
+    "skills": [
+      {
+        "skillId": 4,
+        "title": "Skill 4",
+        "color": "#fc8a0d",
+        "percent": "100%"
+      },
+      {
+        "skillId": 5,
+        "title": "Skill 5",
+        "color": "#e6e420",
+        "percent": "72%"
+      },
+      {
+        "skillId": 6,
+        "title": "Skill 6",
+        "color": "#1fc533",
+        "percent": "58%"
+      }
+    ],
+    "task": {
+      "taskId": 2,
+      "title": "Task 2",
+      "tags": ["skill 5", "skill 6"]
+    }
+  },
+  {
+    "journeyId": 3,
+    "color": "#5454d0",
+    "title": "Frontend Developer",
     "points": 260,
     "percent": 80,
     "rank": "Senior",
     "skills": [
       {
-        "skillId": 4,
+        "skillId": 7,
         "title": "HTML",
-        "color": "0xFFF8CD46",
-        "percent": 90
+        "color": "#812AF3",
+        "percent": "90%"
       },
       {
-        "skillId": 5,
+        "skillId": 8,
         "title": "CSS",
-        "color": "0xFF5658CF",
-        "percent": 80
+        "color": "#2699F2",
+        "percent": "80%"
       },
       {
-        "skillId": 6,
+        "skillId": 9,
         "title": "JavaScript",
-        "color": "0xFFF29938",
-        "percent": 70
+        "color": "#e41e11",
+        "percent": "70%"
       }
     ],
     "task": {
-      "taskId": 2,
+      "taskId": 3,
       "title": "Flex Froggy",
-      "tags": [
-        "CSS"
-      ]
+      "tags": ["CSS"]
+    }
+  },
+  {
+    "journeyId": 4,
+    "color": "#5A9F0A",
+    "title": "Journey 4",
+    "points": 160,
+    "percent": 10,
+    "rank": "Senior",
+    "skills": [
+      {
+        "skillId": 10,
+        "title": "Skill 10",
+        "color": "#D90600",
+        "percent": "40%"
+      },
+      {
+        "skillId": 11,
+        "title": "Skill 11",
+        "color": "#007D83",
+        "percent": "50%"
+      }
+    ],
+    "task": {
+      "taskId": 4,
+      "title": "Task 4",
+      "tags": ["skill 10", "skill 11", "skill 12", "skill 13"]
     }
   }
 ]

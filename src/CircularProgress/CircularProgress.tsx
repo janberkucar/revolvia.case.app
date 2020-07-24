@@ -30,7 +30,7 @@ const CircularProgress = ({
   fg,
   percentage,
 }: CircularProgressProps) => {
-  const theta = multiply(progress, 2 * PI - 2);
+  const theta = multiply(progress, (2 * PI * percentage) / 100);
   const opacity = lessThan(theta, PI);
   const rotate = interpolate(theta, {
     inputRange: [PI, 2 * PI],

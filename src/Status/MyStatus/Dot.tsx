@@ -2,7 +2,7 @@
 import React from "react";
 import Animated, { interpolate, Extrapolate } from "react-native-reanimated";
 
-// #region CONST --------------------------------------------------------
+// #region CONST ----------------------------------------------------------
 // * INTERFACE ------------------------------------------------------------
 interface DotProps {
   index: number;
@@ -23,7 +23,7 @@ const Dot = ({ index, currentIndex }: DotProps) => {
     extrapolate: Extrapolate.CLAMP,
   });
 
-  //#region Screen. DOTS ------------------------------------
+  //#region Screen. DOTS ---------------------------------------------------
   return (
     <Animated.View
       style={{

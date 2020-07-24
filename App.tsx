@@ -1,6 +1,5 @@
 import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Header } from "react-native-elements";
 
 import { MyStatus, Profile } from "./src/Status";
 import { LoadAssets } from "./src/components";

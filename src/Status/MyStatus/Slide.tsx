@@ -3,11 +3,12 @@ import React from "react";
 import { View, Text, Dimensions, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
+// * File Imports ---------------------------------------------------------
+import CircleProg from "../../CircularProgress/CirleProg";
+
 // * EXPORTS --------------------------------------------------------------
 const { width, height } = Dimensions.get("window");
 export const SLIDE_HEIGHT = 0.4 * height;
-
-import CircleProg from "../../CircularProgress/CirleProg";
 
 // #region CONST --------------------------------------------------------
 // * STYLES --------------------------------------------------------------
@@ -47,14 +48,14 @@ const styles = StyleSheet.create({
 // * INTERFACE ------------------------------------------------------------
 interface SlideProps {
   title: string;
-  percentage: number;
+  percent: number;
   right?: boolean;
   rank: string;
   points: number;
 }
 // #endregion
 // * TITLE VARS -----------------------------------------------------------
-const Slide = ({ title, right, percentage, rank, points }: SlideProps) => {
+const Slide = ({ title, right, percent, rank, points }: SlideProps) => {
   const transform = [
     { translateY: (SLIDE_HEIGHT - 100) / 2 },
     { translateX: right ? width / 2 - 30 : -width / 2 + 30 },
@@ -97,7 +98,7 @@ const Slide = ({ title, right, percentage, rank, points }: SlideProps) => {
             </Text>
           </View>
 
-          <CircleProg percentage={percentage} />
+          <CircleProg percentage={percent} />
 
           <View
             style={{

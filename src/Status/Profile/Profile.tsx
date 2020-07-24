@@ -11,9 +11,17 @@ import {
 import UserPermissions from "../../utilities/UserPermissions";
 import * as ImagePicker from "expo-image-picker";
 
-// #region CONST --------------------------------------------------------
+// #region CONST ---------------------------------------------------------
 const { height } = Dimensions.get("window");
+
+// * EXPORTS -------------------------------------------------------------
 export const AVATAR_HEIGHT = 0.43 * height;
+
+let photo: {
+  cancelled: false;
+} & import("expo-image-picker/build/ImagePicker.types").ImageInfo;
+
+let notUpdated = false;
 
 // * STYLES --------------------------------------------------------------
 const styles = StyleSheet.create({
@@ -31,9 +39,6 @@ const styles = StyleSheet.create({
   },
   avatarContainer: {
     marginTop: 64,
-    shadowColor: "#151734",
-    shadowRadius: 32,
-    shadowOpacity: 0.4,
   },
 
   avatar: {
@@ -72,15 +77,24 @@ const styles = StyleSheet.create({
 //#endregion
 const Profile = () => {
   const handlePickAvatar = async () => {
+    //? Testing the button.
     console.log("I have presssed");
+
     UserPermissions.getCameraPermission();
 
+    // TODO Result for the avatar changing ****
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
       aspect: [4, 3],
     });
+
+    if (!result.cancelled) {
+      photo = result;
+      notUpdated = true;
+    }
   };
+
   //#region Screen. Avatar > 3 text cards ------------------------------------
   return (
     <View style={styles.container}>
@@ -90,7 +104,11 @@ const Profile = () => {
           onPress={() => handlePickAvatar()}
         >
           <Image
-            source={require("../../../assets/avatar.jpg")}
+            source={
+              notUpdated
+                ? { uri: photo.uri }
+                : require("../../../assets/avatar.jpg")
+            }
             style={styles.avatar}
           />
         </TouchableOpacity>
@@ -99,15 +117,15 @@ const Profile = () => {
       </View>
       <View style={styles.statsContainer}>
         <View style={styles.stat}>
-          <Text style={styles.statAmount}>2</Text>
+          <Text style={styles.statAmount}>4</Text>
           <Text style={styles.statTitle}>Journeys</Text>
         </View>
         <View style={styles.stat}>
-          <Text style={styles.statAmount}>981</Text>
+          <Text style={styles.statAmount}>1,222</Text>
           <Text style={styles.statTitle}>Points</Text>
         </View>
         <View style={styles.stat}>
-          <Text style={styles.statAmount}>6</Text>
+          <Text style={styles.statAmount}>4</Text>
           <Text style={styles.statTitle}>Tasks</Text>
         </View>
       </View>

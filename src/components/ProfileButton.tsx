@@ -9,6 +9,7 @@ const ProfileButton = ({
   return (
     <Button
       onPress={() => {
+        console.log("Test");
         navigation.navigate("Profile");
       }}
       title="Info"

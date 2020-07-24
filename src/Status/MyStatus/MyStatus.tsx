@@ -5,10 +5,12 @@ import { interpolateColor, useScrollHandler } from "react-native-redash";
 import Animated, { multiply, divide } from "react-native-reanimated";
 
 // * File Imports ---------------------------------------------------------
+import { StackNavigationProps, Routes } from "../../components/Navigation";
+import data from "../../../assets/data.json";
+
 import Slide, { SLIDE_HEIGHT } from "./Slide";
 import Subslide from "./Subslide";
 import Dot from "./Dot";
-import { StackNavigationProps, Routes } from "../../components/Navigation";
 
 // #region CONST --------------------------------------------------------
 const { width } = Dimensions.get("window");
@@ -50,47 +52,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-
-// ? SLIDES CONTENT -----------------------------------------------------
-const slides = [
-  {
-    title: "Art Director",
-    subtitle: "Use Shortcuts As A Pro",
-    description: "Today's Task",
-    color: "#3e9a8f",
-    percentage: 65,
-    rank: "Beginner",
-    points: 582,
-  },
-  {
-    title: "Journey",
-    subtitle: "Task",
-    description: "Today's Task",
-    color: "#f76325",
-    percentage: 0,
-    rank: "Beginner",
-    points: 0,
-  },
-  {
-    title: "Frontend Developer",
-    subtitle: "Flex Froggy",
-    description: "Today's Task",
-    color: "#5454d0",
-    percentage: 80,
-    rank: "Senior",
-    points: 260,
-  },
-
-  {
-    title: "Journey",
-    subtitle: "Task",
-    description: "Today's Task",
-    color: "#9cd35b",
-    percentage: 0,
-    rank: "Senior",
-    points: 0,
-  },
-];
 // #endregion
 
 // * SLIDES ANIMATION VARS -----------------------------------------------
@@ -99,8 +60,8 @@ const MyStatus = ({ navigation }: StackNavigationProps<Routes, "MyStatus">) => {
 
   const { scrollHandler, x } = useScrollHandler();
   const backgroundColor = interpolateColor(x, {
-    inputRange: slides.map((_, i) => i * width),
-    outputRange: slides.map((slide) => slide.color),
+    inputRange: data.map((_, i) => i * width),
+    outputRange: data.map((data) => data.color),
   });
 
   //#region Screen. Slider > Footer --------------------------------------
@@ -116,11 +77,11 @@ const MyStatus = ({ navigation }: StackNavigationProps<Routes, "MyStatus">) => {
           showsHorizontalScrollIndicator={false}
           {...scrollHandler}
         >
-          {slides.map(({ title, percentage, rank, points }, index) => (
+          {data.map(({ title, percent, rank, points }, index) => (
             <Slide
               key={index}
               right={!!(index % 2)}
-              {...{ percentage }}
+              {...{ percent }}
               {...{ rank }}
               {...{ points }}
               {...{ title }}
@@ -136,7 +97,7 @@ const MyStatus = ({ navigation }: StackNavigationProps<Routes, "MyStatus">) => {
 
         <View style={styles.footerContent}>
           <View style={styles.pagination}>
-            {slides.map((_, index) => (
+            {data.map((_, index) => (
               <Dot key={index} currentIndex={divide(x, width)} {...{ index }} />
             ))}
           </View>
@@ -144,13 +105,14 @@ const MyStatus = ({ navigation }: StackNavigationProps<Routes, "MyStatus">) => {
             style={{
               flex: 1,
               flexDirection: "row",
-              width: width * slides.length,
+              width: width * data.length,
               transform: [{ translateX: multiply(x, -1) }],
             }}
           >
-            {slides.map(({ subtitle, description }, index) => {
-              const last = index === slides.length - 1;
-
+            {data.map(({ task, skills }, index) => {
+              const last = index === data.length - 1;
+              const subtitle = task.title;
+              const tags = task.tags;
               return (
                 <Subslide
                   onPress={() => {
@@ -162,7 +124,7 @@ const MyStatus = ({ navigation }: StackNavigationProps<Routes, "MyStatus">) => {
                         .scrollTo({ x: width * (index + 1), animated: true });
                     }
                   }}
-                  {...{ subtitle, description, last }}
+                  {...{ subtitle, last, tags, skills }}
                 />
               );
             })}

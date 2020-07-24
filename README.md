@@ -12,6 +12,31 @@ Submission of Janberk Uçar for the Job Hiring Proccess with Revolvia.
 ![screen3](https://user-images.githubusercontent.com/44262613/87871311-f8e24d00-c9b7-11ea-8eca-b2f10c8b681f.JPG)
 
 ![screen4](https://user-images.githubusercontent.com/44262613/87871312-faac1080-c9b7-11ea-9816-eabbb7a6fd08.JPG)
+
+#---
+
+# NOTES
+
+# Profile pic doesnt change?
+
+    Right now, you can update your picture but it will only work on cache because I don't have a async storage implemented (It will take more time to do that and it is not necessary)
+    Secondly, on the database, it will update respect to uri.
+
+    Right now, you upload your pic.
+    Tab back and come back.
+    The components source changes but component itself doesnt change. So when you open and close your app, the pic will dissapear.
+    And the picture on the My Status (Main Screen) doesnt get updated. Again, because I can't store it in this current phone itself / storage.
+
+# Data.json doesnt work?
+
+    Everyting, including the colors, comes from the data.json itself and only that.
+    But I had to extend it.
+    Percentage value changed because %80, other than 80 gives me more accurate values for the progress bars. It can be just 80 too.
+    Color values were different.
+    I added 2 more journey with respect to skills as a dummie, to have 4 screens to total, but you can discard them and it still works.
+
+    For more: Check my data.json.
+
 # Development Proccess.
 
 ---
@@ -138,3 +163,38 @@ Seventh Day:
         [x] Star and trophy -> yellow.
         [x] Progress Color.
         [x] GitHub configuration.
+
+---
+
+After Feedback (20.07) :
+
+    "data.json’daki veriyi dogrudan ana ekranda backend’den çekmişsin gibi kullanıp, secili journey’e gore ekran state ini guncellemendi(secili journey e gore percent, points, skills tum alanlar degismeli). Data tek seferde geliyor yani. Daha kucuk komponentlere ilk çektiğin yerden gerekli kucuk datayı paslayabilirsin."
+
+
+    Bug Fixing:
+        [x] Journey Card percentage doesn't show on ios.
+
+    Adding:
+        [x] UI tasks need to be have tags.
+        [x] General UI Worked on to have room for tags.
+        [x] Tags are dynamic, if 3 tags or 1 still the same.
+
+---
+
+    Bug Fixing:
+        [x] Tags' placement is gets off when added 2 or 4 times. On even numbers.
+        {x} Taking skills as a JSON file in TypeScript as normal entity. It should be centralized, not converted.
+
+    Tried:
+        [x] The ring on the circle progress can be independent component. -> Can't be done.
+
+---
+
+    Bug Fixing:
+        [x] Journey progress circle stuck. Bunun data.json icindeki percent degerine gore değişmesi gerekiyor.
+        [x] Profile pic doesnt change when updated on gallery.
+
+    Adding:
+        [x] Data.json to skills (graphic design, motion design etc) needs to change dynamically respect to journey.
+
+---

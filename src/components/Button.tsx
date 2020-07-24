@@ -11,13 +11,13 @@ const styles = StyleSheet.create({
   container: {
     borderTopLeftRadius: 75,
     borderTopRightRadius: 75,
-    height: 40,
-    width: width - 85,
+    height: 35,
+    width: width * 0.61,
     justifyContent: "center",
     alignItems: "center",
   },
   label: {
-    fontSize: 15,
+    fontSize: 14,
     textAlign: "center",
     fontFamily: "Lato-Black",
   },

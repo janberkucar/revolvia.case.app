@@ -44,7 +44,7 @@ interface CircleProgProps {
 
 const CircleProg = ({ percentage }: CircleProgProps) => {
   const progress = new Value(0);
-  useCode(() => set(progress, timing({ duration: 5000 })), [progress]);
+  useCode(() => set(progress, timing({ duration: 3000 })), [progress]);
   //#region Screen. CircProg - Innercircle  -------------------------------
 
   return (
@@ -58,6 +58,7 @@ const CircleProg = ({ percentage }: CircleProgProps) => {
           bottom: 0,
           justifyContent: "center",
           alignItems: "center",
+          zIndex: 2,
         }}
       >
         <Text style={styles.percentageText}>{percentage}</Text>
