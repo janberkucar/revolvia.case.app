@@ -3,15 +3,19 @@
 Submission of Janberk Uçar for the Job Hiring Proccess with Revolvia.
 
 #---
-![screen5](https://user-images.githubusercontent.com/44262613/87871313-fb44a700-c9b7-11ea-9df7-105cd9896861.JPG)
+![screen5](https://user-images.githubusercontent.com/44262613/88359006-cb135480-cd79-11ea-8d6b-5c3719c55ef1.JPG)
 
-![screen1](https://user-images.githubusercontent.com/44262613/87871286-d9e3bb00-c9b7-11ea-8423-b68de576d4ed.JPG)
+![screen1](https://user-images.githubusercontent.com/44262613/88358994-c189ec80-cd79-11ea-9792-8a1ea9515c73.JPG)
 
-![screen2](https://user-images.githubusercontent.com/44262613/87871298-ee27b800-c9b7-11ea-8269-3223a491c16c.JPG)
+![screen2](https://user-images.githubusercontent.com/44262613/88359000-c3ec4680-cd79-11ea-95ec-287144b2a0d4.JPG)
 
-![screen3](https://user-images.githubusercontent.com/44262613/87871311-f8e24d00-c9b7-11ea-8eca-b2f10c8b681f.JPG)
+![screen3](https://user-images.githubusercontent.com/44262613/88359002-c64ea080-cd79-11ea-99f6-760a4de33540.JPG)
 
-![screen4](https://user-images.githubusercontent.com/44262613/87871312-faac1080-c9b7-11ea-9816-eabbb7a6fd08.JPG)
+![screen4](https://user-images.githubusercontent.com/44262613/88359003-c8b0fa80-cd79-11ea-8b51-1649bf0250f3.JPG)
+
+![changeProfilePic](https://user-images.githubusercontent.com/44262613/88359009-cd75ae80-cd79-11ea-8e39-87f4d22cc864.JPG)
+
+![screen5After](https://user-images.githubusercontent.com/44262613/88359012-cf3f7200-cd79-11ea-99ca-2a0552a2af91.JPG)
 
 #---
 
