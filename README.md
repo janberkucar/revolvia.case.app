@@ -185,6 +185,9 @@ After Feedback (20.07) :
         [x] Tags' placement is gets off when added 2 or 4 times. On even numbers.
         {x} Taking skills as a JSON file in TypeScript as normal entity. It should be centralized, not converted.
 
+    Adding:
+        {x} Tag.tsx added.
+
     Tried:
         [x] The ring on the circle progress can be independent component. -> Can't be done.
 
@@ -195,6 +198,7 @@ After Feedback (20.07) :
         [x] Profile pic doesnt change when updated on gallery.
 
     Adding:
+        [x] Skill.tsx added.
         [x] Data.json to skills (graphic design, motion design etc) needs to change dynamically respect to journey.
 
 ---
