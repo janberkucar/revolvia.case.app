@@ -1,4 +1,4 @@
-# Revolvia-NativeProject-Submission
+# Revolvia-Native Project-Submission
 
 Submission of Janberk Uçar for the Job Hiring Proccess with Revolvia.
 
